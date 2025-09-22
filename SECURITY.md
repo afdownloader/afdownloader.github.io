@@ -7,10 +7,10 @@ currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 4.0.0.0 | coming soon        |
-| 3.0.0.0 | coming soon        |
-| 2.0.0.0 | coming soon        |
-| 1.0.0.0 | :white_check_mark: |
+|  2029   | coming soon        |
+|  2028   | coming soon        |
+|  2027   | coming soon        |
+|  2026   | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
