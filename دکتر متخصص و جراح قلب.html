@@ -1,0 +1,731 @@
+
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دکتر - متخصص جراحی قلب</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .hero-pattern {
+            background-color: #f0f9ff;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23bae6fd' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .appointment-form {
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23bae6fd' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .heartbeat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .certification-logo {
+            transition: all 0.3s ease;
+        }
+        
+        .certification-logo:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-sky-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="mr-2 text-3xl heartbeat">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold">دکتر</h1>
+                    <p class="text-sm text-sky-200">متخصص و جراح قلب</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6 space-x-reverse">
+                    <li><a href="#home" class="hover:text-sky-200 transition">خانه</a></li>
+                    <li><a href="#about" class="hover:text-sky-200 transition">درباره من</a></li>
+                    <li><a href="#services" class="hover:text-sky-200 transition">خدمات</a></li>
+                    <li><a href="#testimonials" class="hover:text-sky-200 transition">نظرات بیماران</a></li>
+                    <li><a href="#appointment" class="hover:text-sky-200 transition">نوبت‌دهی</a></li>
+                    <li><a href="#contact" class="hover:text-sky-200 transition">تماس با ما</a></li>
+                </ul>
+            </nav>
+            
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-sky-800 pb-4">
+            <nav class="container mx-auto px-4">
+                <ul class="space-y-2">
+                    <li><a href="#home" class="block py-2 hover:text-sky-200 transition">خانه</a></li>
+                    <li><a href="#about" class="block py-2 hover:text-sky-200 transition">درباره من</a></li>
+                    <li><a href="#services" class="block py-2 hover:text-sky-200 transition">خدمات</a></li>
+                    <li><a href="#testimonials" class="block py-2 hover:text-sky-200 transition">نظرات بیماران</a></li>
+                    <li><a href="#appointment" class="block py-2 hover:text-sky-200 transition">نوبت‌دهی</a></li>
+                    <li><a href="#contact" class="block py-2 hover:text-sky-200 transition">تماس با ما</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern py-20 md:py-32">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold text-sky-900 mb-4">مراقبت قلبی با کیفیت برتر</h2>
+                <p class="text-lg text-gray-700 mb-8">با بیش از ۲۰ سال تجربه در جراحی قلب و عروق، ما به سلامت قلب شما اهمیت می‌دهیم.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 sm:space-x-reverse">
+                    <a href="#appointment" class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center">نوبت‌دهی آنلاین</a>
+                    <a href="#services" class="bg-white hover:bg-gray-100 text-sky-700 font-bold py-3 px-6 rounded-lg border border-sky-600 transition duration-300 text-center">خدمات ما</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <svg class="w-64 h-64 md:w-80 md:h-80 text-sky-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+                        <path d="M16 12.9V8.1L12.5 11h-1L8 8.1v4.8c0 .56.19 1.1.52 1.53L12 18l3.48-3.57c.33-.43.52-.97.52-1.53z" fill="white"/>
+                    </svg>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12h2v5h2v-5h2v-2h-6v2zm1-9c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medical Certifications Section -->
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-6">
+                <h3 class="text-xl font-bold text-sky-900">مورد تایید سازمان‌های معتبر پزشکی</h3>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-8">
+                <!-- Medical Council Logo -->
+                <div class="certification-logo">
+                    <svg class="w-32 h-24" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="40" y="20" width="120" height="110" rx="10" fill="#0369a1" />
+                        <rect x="50" y="30" width="100" height="90" rx="5" fill="white" />
+                        <path d="M100 40 C 85 50, 85 70, 100 80 C 115 70, 115 50, 100 40" fill="#0369a1" />
+                        <path d="M80 90 L 120 90 L 120 110 L 80 110 Z" fill="#0369a1" />
+                        <text x="100" y="130" font-size="12" text-anchor="middle" fill="white" font-weight="bold">سازمان نظام پزشکی</text>
+                    </svg>
+                </div>
+                
+                <!-- Ministry of Health Logo -->
+                <div class="certification-logo">
+                    <svg class="w-32 h-24" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="60" r="40" fill="#0369a1" />
+                        <circle cx="100" cy="60" r="35" fill="white" />
+                        <path d="M100 30 L 105 50 L 125 50 L 110 65 L 115 85 L 100 75 L 85 85 L 90 65 L 75 50 L 95 50 Z" fill="#0369a1" />
+                        <rect x="70" y="100" width="60" height="20" rx="5" fill="#0369a1" />
+                        <text x="100" y="115" font-size="10" text-anchor="middle" fill="white" font-weight="bold">وزارت بهداشت</text>
+                    </svg>
+                </div>
+                
+                <!-- Cardiovascular Association Logo -->
+                <div class="certification-logo">
+                    <svg class="w-32 h-24" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="40" y="30" width="120" height="90" rx="45" fill="#0369a1" />
+                        <rect x="50" y="40" width="100" height="70" rx="35" fill="white" />
+                        <path d="M70 75 L 85 60 L 100 90 L 115 50 L 130 75" stroke="#0369a1" stroke-width="6" fill="none" />
+                        <text x="100" y="130" font-size="10" text-anchor="middle" fill="#0369a1" font-weight="bold">انجمن قلب و عروق ایران</text>
+                    </svg>
+                </div>
+                
+                <!-- International Certification Logo -->
+                <div class="certification-logo">
+                    <svg class="w-32 h-24" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="75" r="50" fill="#0369a1" />
+                        <circle cx="100" cy="75" r="45" fill="white" />
+                        <path d="M100 35 C 75 50, 75 100, 100 115 C 125 100, 125 50, 100 35" fill="#0369a1" />
+                        <circle cx="100" cy="75" r="15" fill="white" />
+                        <circle cx="100" cy="75" r="10" fill="#0369a1" />
+                        <text x="100" y="135" font-size="10" text-anchor="middle" fill="#0369a1" font-weight="bold">گواهینامه بین‌المللی جراحی قلب</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-sky-50 p-6 rounded-lg text-center shadow-md">
+                    <div class="text-sky-600 text-4xl mb-2">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-2">+۲۰</h3>
+                    <p class="text-gray-600">سال تجربه</p>
+                </div>
+                <div class="bg-sky-50 p-6 rounded-lg text-center shadow-md">
+                    <div class="text-sky-600 text-4xl mb-2">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-2">+۵۰۰۰</h3>
+                    <p class="text-gray-600">جراحی موفق</p>
+                </div>
+                <div class="bg-sky-50 p-6 rounded-lg text-center shadow-md">
+                    <div class="text-sky-600 text-4xl mb-2">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-2">+۹۸٪</h3>
+                    <p class="text-gray-600">رضایت بیماران</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="bg-white p-2 rounded-lg shadow-lg">
+                        <svg class="w-full h-auto" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="35" r="25" fill="#0369a1" />
+                            <circle cx="50" cy="30" r="20" fill="#f8fafc" />
+                            <rect x="35" y="55" width="30" height="40" fill="#0369a1" />
+                            <rect x="40" y="60" width="20" height="5" fill="#f8fafc" />
+                            <rect x="40" y="70" width="20" height="5" fill="#f8fafc" />
+                            <rect x="40" y="80" width="20" height="5" fill="#f8fafc" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pr-10">
+                    <h2 class="text-3xl font-bold text-sky-900 mb-6">درباره دکتر</h2>
+                    <p class="text-gray-700 mb-4">متخصص و جراح برجسته قلب با بیش از ۲۰ سال تجربه در زمینه جراحی قلب و عروق، فارغ‌التحصیل دانشگاه علوم پزشکی و دارای دوره‌های تخصصی از معتبرترین مراکز پزشکی جهان.</p>
+                    <p class="text-gray-700 mb-6">ایشان با تخصص در جراحی‌های پیچیده قلب، تعویض دریچه، بای‌پس عروق کرونر و درمان‌های نوین قلبی، همواره در تلاش برای ارائه بهترین خدمات درمانی به بیماران خود هستند.</p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                            <div class="text-sky-600 text-2xl ml-3">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">تحصیلات</h4>
+                                <p class="text-sm text-gray-600">دانشگاه علوم پزشکی</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
+                            <div class="text-sky-600 text-2xl ml-3">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">گواهینامه‌ها</h4>
+                                <p class="text-sm text-gray-600">بورد تخصصی جراحی قلب</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-sky-900 mb-4">خدمات تخصصی</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">ما طیف گسترده‌ای از خدمات تخصصی قلب و عروق را با استفاده از پیشرفته‌ترین تجهیزات و روش‌های درمانی ارائه می‌دهیم.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-sky-50 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                    <div class="text-sky-600 text-3xl mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">جراحی بای‌پس عروق کرونر</h3>
+                    <p class="text-gray-600">درمان گرفتگی عروق قلب با استفاده از پیشرفته‌ترین تکنیک‌های جراحی بای‌پس.</p>
+                </div>
+                
+                <div class="bg-sky-50 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                    <div class="text-sky-600 text-3xl mb-4">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">تعویض و ترمیم دریچه قلب</h3>
+                    <p class="text-gray-600">جراحی تخصصی برای تعویض یا ترمیم دریچه‌های آسیب‌دیده قلب.</p>
+                </div>
+                
+                <div class="bg-sky-50 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                    <div class="text-sky-600 text-3xl mb-4">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">مشاوره تخصصی قلب</h3>
+                    <p class="text-gray-600">ارزیابی دقیق وضعیت قلب و ارائه برنامه درمانی مناسب برای هر بیمار.</p>
+                </div>
+                
+                <div class="bg-sky-50 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                    <div class="text-sky-600 text-3xl mb-4">
+                        <i class="fas fa-lungs"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">جراحی آئورت</h3>
+                    <p class="text-gray-600">درمان آنوریسم و سایر مشکلات مربوط به سرخرگ آئورت.</p>
+                </div>
+                
+                <div class="bg-sky-50 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                    <div class="text-sky-600 text-3xl mb-4">
+                        <i class="fas fa-file-medical-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">اکوکاردیوگرافی پیشرفته</h3>
+                    <p class="text-gray-600">تصویربرداری دقیق از قلب برای تشخیص مشکلات ساختاری و عملکردی.</p>
+                </div>
+                
+                <div class="bg-sky-50 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                    <div class="text-sky-600 text-3xl mb-4">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">مراقبت‌های پس از جراحی</h3>
+                    <p class="text-gray-600">برنامه‌های مراقبتی جامع برای بهبود سریع‌تر و موثرتر پس از عمل جراحی.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-sky-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-sky-900 mb-4">نظرات بیماران</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">آنچه بیماران ما درباره خدمات و مراقبت‌های ما می‌گویند.</p>
+            </div>
+            
+            <div class="testimonial-slider relative">
+                <div class="overflow-hidden">
+                    <div id="testimonials-container" class="flex transition-transform duration-500">
+                        <div class="testimonial-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex items-center mb-4">
+                                    <div class="text-yellow-400 flex">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">"پس از عمل جراحی قلب باز، زندگی من کاملاً تغییر کرد. ایشان با تخصص و مهارت بالا و برخورد بسیار انسانی، به من کمک کردند تا دوباره به زندگی عادی برگردم."</p>
+                                <div class="flex items-center">
+                                    <div class="bg-sky-100 w-10 h-10 rounded-full flex items-center justify-center ml-3">
+                                        <span class="text-sky-700 font-bold">ر</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">بیمار</h4>
+                                        <p class="text-sm text-gray-500">جراحی قلب باز</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex items-center mb-4">
+                                    <div class="text-yellow-400 flex">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">"دکتر با صبر و حوصله تمام مراحل درمان را برای من توضیح دادند و همین باعث شد با اطمینان خاطر بیشتری جراحی را انجام دهم. از تخصص و اخلاق پزشکی ایشان بسیار سپاسگزارم."</p>
+                                <div class="flex items-center">
+                                    <div class="bg-sky-100 w-10 h-10 rounded-full flex items-center justify-center ml-3">
+                                        <span class="text-sky-700 font-bold">م</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">بیمار</h4>
+                                        <p class="text-sm text-gray-500">تعویض دریچه قلب</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex items-center mb-4">
+                                    <div class="text-yellow-400 flex">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">"من به دلیل مشکل مادرزادی قلب، نیاز به جراحی پیچیده‌ای داشتم که دکتر با موفقیت انجام دادند. تیم پزشکی ایشان فوق‌العاده حرفه‌ای و دلسوز بودند."</p>
+                                <div class="flex items-center">
+                                    <div class="bg-sky-100 w-10 h-10 rounded-full flex items-center justify-center ml-3">
+                                        <span class="text-sky-700 font-bold">ع</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800">بیمار</h4>
+                                        <p class="text-sm text-gray-500">نقص مادرزادی قلب</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="prev-testimonial" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-sky-600 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-sky-700 focus:outline-none">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <button id="next-testimonial" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-sky-600 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-sky-700 focus:outline-none">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="py-16 appointment-form">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-sky-700 text-white p-8">
+                        <h2 class="text-3xl font-bold mb-4">نوبت‌دهی آنلاین</h2>
+                        <p class="mb-6">برای دریافت نوبت ویزیت یا مشاوره، فرم مقابل را تکمیل نمایید.</p>
+                        
+                        <div class="mb-6">
+                            <h3 class="font-bold text-xl mb-2">ساعات کاری</h3>
+                            <ul class="space-y-2">
+                                <li class="flex justify-between">
+                                    <span>شنبه تا چهارشنبه:</span>
+                                    <span>۸ صبح تا ۴ بعدازظهر</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>پنجشنبه:</span>
+                                    <span>۸ صبح تا ۱ بعدازظهر</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>جمعه:</span>
+                                    <span>تعطیل</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">اطلاعات تماس</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-phone ml-2"></i>
+                                    <span>شماره تماس</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-envelope ml-2"></i>
+                                    <span>ایمیل</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8">
+                        <form id="appointment-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-1">نام و نام خانوادگی</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-1">شماره تماس</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-gray-700 font-medium mb-1">نوع خدمات</label>
+                                <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required>
+                                    <option value="">انتخاب کنید</option>
+                                    <option value="consultation">مشاوره اولیه</option>
+                                    <option value="checkup">چکاپ قلب</option>
+                                    <option value="echocardiography">اکوکاردیوگرافی</option>
+                                    <option value="surgery">جراحی</option>
+                                    <option value="followup">ویزیت پیگیری</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="date" class="block text-gray-700 font-medium mb-1">تاریخ مورد نظر</label>
+                                <input type="date" id="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-1">توضیحات</label>
+                                <textarea id="message" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">ثبت درخواست نوبت</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-sky-900 mb-4">تماس با ما</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">برای کسب اطلاعات بیشتر یا هماهنگی ویزیت، با ما در تماس باشید.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-sky-600 text-3xl mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">آدرس مطب</h3>
+                    <p class="text-gray-600">آدرس مطب</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-sky-600 text-3xl mb-4">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">شماره تماس</h3>
+                    <p class="text-gray-600">تلفن مطب</p>
+                    <p class="text-gray-600">همراه</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-sky-600 text-3xl mb-4">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">ایمیل</h3>
+                    <p class="text-gray-600">ایمیل</p>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="h-64 bg-gray-200 rounded-lg">
+                        <!-- Map Placeholder -->
+                        <div class="w-full h-full flex items-center justify-center bg-sky-100">
+                            <div class="text-center">
+                                <div class="text-sky-600 text-4xl mb-2">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                </div>
+                                <p class="text-gray-700">نقشه موقعیت مطب</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-sky-900 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="mr-2 text-2xl">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">دکتر</h3>
+                            <p class="text-sm text-sky-200">متخصص و جراح قلب</p>
+                        </div>
+                    </div>
+                    <p class="text-sky-100 mb-4">ارائه خدمات تخصصی جراحی قلب با بالاترین استانداردهای پزشکی و مراقبت‌های ویژه برای بیماران.</p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="text-white hover:text-sky-200 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-sky-200 transition">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-sky-200 transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-sky-200 transition">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">لینک‌های سریع</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-sky-100 hover:text-white transition">خانه</a></li>
+                        <li><a href="#about" class="text-sky-100 hover:text-white transition">درباره دکتر</a></li>
+                        <li><a href="#services" class="text-sky-100 hover:text-white transition">خدمات</a></li>
+                        <li><a href="#testimonials" class="text-sky-100 hover:text-white transition">نظرات بیماران</a></li>
+                        <li><a href="#appointment" class="text-sky-100 hover:text-white transition">نوبت‌دهی</a></li>
+                        <li><a href="#contact" class="text-sky-100 hover:text-white transition">تماس با ما</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ساعات کاری</h3>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between">
+                            <span>شنبه تا چهارشنبه:</span>
+                            <span>۸ صبح تا ۴ بعدازظهر</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>پنجشنبه:</span>
+                            <span>۸ صبح تا ۱ بعدازظهر</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>جمعه:</span>
+                            <span>تعطیل</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-4 pt-4 border-t border-sky-800">
+                        <p class="text-sky-100">شماره تماس اضطراری</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-sky-800 text-center">
+                <p class="text-sky-200">&copy; ۱۴۰۲ - تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Testimonial Slider
+        const testimonialsContainer = document.getElementById('testimonials-container');
+        const prevButton = document.getElementById('prev-testimonial');
+        const nextButton = document.getElementById('next-testimonial');
+        const slides = document.querySelectorAll('.testimonial-slide');
+        
+        let currentIndex = 0;
+        const slidesToShow = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+        const slideWidth = 100 / slidesToShow;
+        
+        // Set initial width of slides
+        slides.forEach(slide => {
+            slide.style.width = `${slideWidth}%`;
+        });
+        
+        function updateSlider() {
+            const offset = -currentIndex * slideWidth;
+            testimonialsContainer.style.transform = `translateX(${offset}%)`;
+        }
+        
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlider();
+            }
+        });
+        
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < slides.length - slidesToShow) {
+                currentIndex++;
+                updateSlider();
+            }
+        });
+        
+        // Update slider on window resize
+        window.addEventListener('resize', () => {
+            const newSlidesToShow = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+            
+            if (newSlidesToShow !== slidesToShow) {
+                // Reset slider
+                currentIndex = 0;
+                updateSlider();
+            }
+        });
+        
+        // Certification logos hover effect
+        const certificationLogos = document.querySelectorAll('.certification-logo');
+        
+        certificationLogos.forEach(logo => {
+            logo.addEventListener('mouseenter', () => {
+                logo.style.transform = 'scale(1.05)';
+            });
+            
+            logo.addEventListener('mouseleave', () => {
+                logo.style.transform = 'scale(1)';
+            });
+        });
+        
+        // Appointment Form Submission
+        const appointmentForm = document.getElementById('appointment-form');
+        
+        appointmentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const message = document.getElementById('message').value;
+            
+            // In a real application, you would send this data to a server
+            // For demo purposes, we'll just show an alert
+            alert(`درخواست نوبت شما با موفقیت ثبت شد!`);
+            
+            // Reset form
+            appointmentForm.reset();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95e2705a70ddc489',t:'MTc1MjM0MzIxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

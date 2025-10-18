@@ -1,0 +1,423 @@
+
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه آنلاین</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+        }
+        
+        .certification-logo {
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+            opacity: 0.7;
+        }
+        
+        .certification-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-600">فروشگاه<span class="text-gray-800">آنلاین</span></div>
+                
+                <div class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#" class="text-gray-800 hover:text-blue-600 transition">خانه</a>
+                    <a href="#" class="text-gray-800 hover:text-blue-600 transition">محصولات</a>
+                    <a href="#" class="text-gray-800 hover:text-blue-600 transition">درباره ما</a>
+                    <a href="#" class="text-gray-800 hover:text-blue-600 transition">تماس با ما</a>
+                </div>
+                
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <a href="#" class="text-gray-800 hover:text-blue-600 transition">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <a href="#" class="text-gray-800 hover:text-blue-600 transition">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <div class="md:hidden">
+                        <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#" class="text-gray-800 hover:text-blue-600 transition">خانه</a>
+                    <a href="#" class="text-gray-800 hover:text-blue-600 transition">محصولات</a>
+                    <a href="#" class="text-gray-800 hover:text-blue-600 transition">درباره ما</a>
+                    <a href="#" class="text-gray-800 hover:text-blue-600 transition">تماس با ما</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">فروشگاه آنلاین محصولات</h1>
+                    <p class="text-lg mb-8 text-gray-300">خرید آسان، سریع و مطمئن از بزرگترین فروشگاه آنلاین</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-md transition font-medium">خرید محصولات</a>
+                        <a href="#" class="bg-transparent border border-white hover:bg-white hover:text-gray-900 text-white px-6 py-3 rounded-md transition font-medium">درباره ما</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <svg class="w-64 h-64" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="40" y="40" width="120" height="120" rx="8" fill="#f0f0f0" stroke="#ddd" stroke-width="2"/>
+                            <circle cx="100" cy="100" r="40" fill="#3B82F6" opacity="0.7"/>
+                            <path d="M80,80 L120,120 M80,120 L120,80" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">محصولات ویژه</h2>
+                <p class="text-gray-600">محصولات برتر و پرفروش ما</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <svg class="w-24 h-24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="20" width="60" height="60" rx="4" fill="#3B82F6" opacity="0.7"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">محصول شماره یک</h3>
+                        <p class="text-gray-600 mb-4">توضیحات کوتاه محصول</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-blue-600">۱۲۰,۰۰۰ تومان</span>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <svg class="w-24 h-24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="30" fill="#3B82F6" opacity="0.7"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">محصول شماره دو</h3>
+                        <p class="text-gray-600 mb-4">توضیحات کوتاه محصول</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-blue-600">۱۵۰,۰۰۰ تومان</span>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <svg class="w-24 h-24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="50,20 80,80 20,80" fill="#3B82F6" opacity="0.7"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">محصول شماره سه</h3>
+                        <p class="text-gray-600 mb-4">توضیحات کوتاه محصول</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-blue-600">۹۰,۰۰۰ تومان</span>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition">افزودن به سبد</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-md transition font-medium inline-block">مشاهده همه محصولات</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">گواهینامه‌ها و تاییدیه‌ها</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">ما افتخار داریم که محصولات و خدمات ما توسط سازمان‌های معتبر تایید شده‌اند</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+                <!-- Certification Logo 1 - ISO 9001 -->
+                <div class="certification-logo p-4 flex items-center justify-center">
+                    <svg class="w-full h-24" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="50" r="40" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+                        <text x="100" y="40" font-size="14" text-anchor="middle" font-weight="bold">ISO</text>
+                        <text x="100" y="60" font-size="14" text-anchor="middle" font-weight="bold">9001</text>
+                        <text x="100" y="75" font-size="8" text-anchor="middle">استاندارد مدیریت کیفیت</text>
+                    </svg>
+                </div>
+                
+                <!-- Certification Logo 2 - CE -->
+                <div class="certification-logo p-4 flex items-center justify-center">
+                    <svg class="w-full h-24" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="50" r="40" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+                        <text x="100" y="55" font-size="24" text-anchor="middle" font-weight="bold">CE</text>
+                        <text x="100" y="75" font-size="8" text-anchor="middle">استاندارد اروپا</text>
+                    </svg>
+                </div>
+                
+                <!-- Certification Logo 3 - Energy Star -->
+                <div class="certification-logo p-4 flex items-center justify-center">
+                    <svg class="w-full h-24" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M100,20 L115,50 L150,55 L125,80 L130,115 L100,100 L70,115 L75,80 L50,55 L85,50 Z" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+                        <text x="100" y="60" font-size="10" text-anchor="middle" font-weight="bold">ENERGY</text>
+                        <text x="100" y="75" font-size="10" text-anchor="middle" font-weight="bold">STAR</text>
+                    </svg>
+                </div>
+                
+                <!-- Certification Logo 4 - ISIRI -->
+                <div class="certification-logo p-4 flex items-center justify-center">
+                    <svg class="w-full h-24" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="60" y="20" width="80" height="60" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
+                        <text x="100" y="50" font-size="14" text-anchor="middle" font-weight="bold">ISIRI</text>
+                        <text x="100" y="70" font-size="8" text-anchor="middle">استاندارد ملی ایران</text>
+                    </svg>
+                </div>
+                
+                <!-- Certification Logo 5 - RoHS -->
+                <div class="certification-logo p-4 flex items-center justify-center">
+                    <svg class="w-full h-24" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="50" r="40" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+                        <text x="100" y="45" font-size="14" text-anchor="middle" font-weight="bold">RoHS</text>
+                        <text x="100" y="65" font-size="8" text-anchor="middle">محدودیت مواد خطرناک</text>
+                    </svg>
+                </div>
+                
+                <!-- Certification Logo 6 - LED Lighting Facts -->
+                <div class="certification-logo p-4 flex items-center justify-center">
+                    <svg class="w-full h-24" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="60" y="20" width="80" height="60" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+                        <text x="100" y="45" font-size="12" text-anchor="middle" font-weight="bold">LED</text>
+                        <text x="100" y="60" font-size="10" text-anchor="middle" font-weight="bold">LIGHTING</text>
+                        <text x="100" y="75" font-size="10" text-anchor="middle" font-weight="bold">FACTS</text>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-600">تمامی محصولات ما دارای گارانتی و خدمات پس از فروش می‌باشند</p>
+                <div class="flex justify-center items-center mt-6">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center ml-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-xl"></i>
+                    </div>
+                    <p class="font-semibold text-lg">تضمین کیفیت و اصالت کالا</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl font-bold mb-2">مورد اعتماد برندهای معتبر</h2>
+                <p class="text-gray-600">برخی از شرکت‌ها و سازمان‌هایی که به ما اعتماد کرده‌اند</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center">
+                <!-- Brand Logo 1 -->
+                <div class="certification-logo p-3">
+                    <svg class="w-full h-16" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="10" width="100" height="40" rx="5" fill="#f0f0f0"/>
+                        <text x="60" y="35" font-size="12" text-anchor="middle" font-weight="bold">شرکت الف</text>
+                    </svg>
+                </div>
+                
+                <!-- Brand Logo 2 -->
+                <div class="certification-logo p-3">
+                    <svg class="w-full h-16" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="10" width="100" height="40" rx="5" fill="#f0f0f0"/>
+                        <text x="60" y="35" font-size="12" text-anchor="middle" font-weight="bold">شرکت ب</text>
+                    </svg>
+                </div>
+                
+                <!-- Brand Logo 3 -->
+                <div class="certification-logo p-3">
+                    <svg class="w-full h-16" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="10" width="100" height="40" rx="5" fill="#f0f0f0"/>
+                        <text x="60" y="35" font-size="12" text-anchor="middle" font-weight="bold">شرکت ج</text>
+                    </svg>
+                </div>
+                
+                <!-- Brand Logo 4 -->
+                <div class="certification-logo p-3">
+                    <svg class="w-full h-16" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="10" width="100" height="40" rx="5" fill="#f0f0f0"/>
+                        <text x="60" y="35" font-size="12" text-anchor="middle" font-weight="bold">شرکت د</text>
+                    </svg>
+                </div>
+                
+                <!-- Brand Logo 5 -->
+                <div class="certification-logo p-3">
+                    <svg class="w-full h-16" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="10" width="100" height="40" rx="5" fill="#f0f0f0"/>
+                        <text x="60" y="35" font-size="12" text-anchor="middle" font-weight="bold">شرکت ه</text>
+                    </svg>
+                </div>
+                
+                <!-- Brand Logo 6 -->
+                <div class="certification-logo p-3">
+                    <svg class="w-full h-16" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="10" width="100" height="40" rx="5" fill="#f0f0f0"/>
+                        <text x="60" y="35" font-size="12" text-anchor="middle" font-weight="bold">شرکت و</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods Section -->
+    <section class="py-8 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-2">روش‌های پرداخت</h3>
+                    <p class="text-gray-600 text-sm">ما انواع روش‌های پرداخت امن را پشتیبانی می‌کنیم</p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-4">
+                    <!-- Payment Method 1 - Shetab -->
+                    <div class="certification-logo p-2 bg-white rounded-lg shadow-sm">
+                        <svg class="w-16 h-10" viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5" y="5" width="70" height="40" rx="4" fill="#f0f0f0" stroke="#ccc"/>
+                            <text x="40" y="30" font-size="10" text-anchor="middle" font-weight="bold">شتاب</text>
+                        </svg>
+                    </div>
+                    
+                    <!-- Payment Method 2 - Shaparak -->
+                    <div class="certification-logo p-2 bg-white rounded-lg shadow-sm">
+                        <svg class="w-16 h-10" viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5" y="5" width="70" height="40" rx="4" fill="#f0f0f0" stroke="#ccc"/>
+                            <text x="40" y="30" font-size="10" text-anchor="middle" font-weight="bold">شاپرک</text>
+                        </svg>
+                    </div>
+                    
+                    <!-- Payment Method 3 - Zarinpal -->
+                    <div class="certification-logo p-2 bg-white rounded-lg shadow-sm">
+                        <svg class="w-16 h-10" viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5" y="5" width="70" height="40" rx="4" fill="#f0f0f0" stroke="#ccc"/>
+                            <text x="40" y="30" font-size="8" text-anchor="middle" font-weight="bold">زرین‌پال</text>
+                        </svg>
+                    </div>
+                    
+                    <!-- Payment Method 4 - Bank Transfer -->
+                    <div class="certification-logo p-2 bg-white rounded-lg shadow-sm">
+                        <svg class="w-16 h-10" viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5" y="5" width="70" height="40" rx="4" fill="#f0f0f0" stroke="#ccc"/>
+                            <text x="40" y="30" font-size="8" text-anchor="middle" font-weight="bold">کارت به کارت</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="text-2xl font-bold text-blue-500 mb-4">فروشگاه<span class="text-white">آنلاین</span></div>
+                    <p class="text-gray-400 max-w-md">فروشگاه آنلاین محصولات با کیفیت</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">دسترسی سریع</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">خانه</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">محصولات</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">درباره ما</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">تماس با ما</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">دسته‌بندی‌ها</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">دسته اول</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">دسته دوم</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">دسته سوم</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-blue-500 transition">دسته چهارم</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-span-2 md:col-span-1">
+                        <h4 class="text-lg font-semibold mb-4">خبرنامه</h4>
+                        <p class="text-gray-400 mb-4">برای اطلاع از آخرین محصولات در خبرنامه ما عضو شوید</p>
+                        <form class="flex">
+                            <input type="email" placeholder="ایمیل خود را وارد کنید" class="px-4 py-2 rounded-r-md w-full focus:outline-none text-gray-800">
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-l-md transition">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© ۱۴۰۲ فروشگاه آنلاین. تمامی حقوق محفوظ است.</p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-blue-500 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-500 transition">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-500 transition">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-500 transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95e309ee65a979bd',t:'MTc1MjM0OTUwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

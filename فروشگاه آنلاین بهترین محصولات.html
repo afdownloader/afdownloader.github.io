@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه آنلاین - خرید محصولات با کیفیت</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'vazir': ['Vazir', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Vazir', sans-serif;
+        }
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .cart-badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-vazir">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 rounded-lg">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">فروشگاه آنلاین</h1>
+                        <p class="text-sm text-gray-600">بهترین محصولات با کیفیت</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-6 space-x-reverse">
+                    <div class="relative">
+                        <input type="text" placeholder="جستجو محصولات..." class="bg-gray-100 rounded-full px-6 py-2 w-80 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button class="absolute left-3 top-2.5 text-gray-500">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div class="relative">
+                        <button id="cartBtn" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                            </svg>
+                        </button>
+                        <span id="cartCount" class="absolute -top-2 -left-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center cart-badge">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-center space-x-8 space-x-reverse py-4">
+                <a href="#" class="hover:text-blue-200 transition-colors font-medium">صفحه اصلی</a>
+                <a href="#" class="hover:text-blue-200 transition-colors font-medium">لباس</a>
+                <a href="#" class="hover:text-blue-200 transition-colors font-medium">الکترونیک</a>
+                <a href="#" class="hover:text-blue-200 transition-colors font-medium">کتاب</a>
+                <a href="#" class="hover:text-blue-200 transition-colors font-medium">ورزش</a>
+                <a href="#" class="hover:text-blue-200 transition-colors font-medium">تماس با ما</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-5xl font-bold mb-6">فروش ویژه تابستان</h2>
+            <p class="text-xl mb-8">تا ۵۰٪ تخفیف روی محصولات منتخب</p>
+            <button class="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors">
+                مشاهده محصولات
+            </button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">محصولات پرفروش</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="productsGrid">
+                <!-- Products will be dynamically generated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-8">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">کیفیت تضمینی</h4>
+                    <p class="text-gray-600">تمام محصولات دارای گارانتی و کیفیت بالا</p>
+                </div>
+                
+                <div class="text-center p-8">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">ارسال سریع</h4>
+                    <p class="text-gray-600">ارسال رایگان برای خریدهای بالای ۵۰۰ هزار تومان</p>
+                </div>
+                
+                <div class="text-center p-8">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">پشتیبانی ۲۴/۷</h4>
+                    <p class="text-gray-600">پشتیبانی کامل در تمام ساعات شبانه روز</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-lg max-w-md w-full p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold">سبد خرید</h3>
+                    <button id="closeCart" class="text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="cartItems" class="space-y-4 mb-6">
+                    <p class="text-gray-500 text-center py-8">سبد خرید شما خالی است</p>
+                </div>
+                <div class="border-t pt-4">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-bold">مجموع:</span>
+                        <span id="cartTotal" class="font-bold text-lg">۰ تومان</span>
+                    </div>
+                    <button id="checkoutBtn" class="w-full bg-green-600 text-white py-3 rounded-lg font-bold hover:bg-green-700 transition-colors disabled:bg-gray-300" disabled>
+                        تسویه حساب
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">درباره ما</h4>
+                    <p class="text-gray-300">فروشگاه آنلاین با بیش از ۱۰ سال تجربه در ارائه بهترین محصولات با کیفیت</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">لینک های مفید</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">سیاست حریم خصوصی</a></li>
+                        <li><a href="#" class="hover:text-white">شرایط استفاده</a></li>
+                        <li><a href="#" class="hover:text-white">راهنمای خرید</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">تماس با ما</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>📞 ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                        <li>📧 info@shop.com</li>
+                        <li>📍 تهران، خیابان ولیعصر</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">شبکه های اجتماعی</h4>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="bg-blue-600 p-2 rounded hover:bg-blue-700">📘</a>
+                        <a href="#" class="bg-blue-400 p-2 rounded hover:bg-blue-500">🐦</a>
+                        <a href="#" class="bg-pink-600 p-2 rounded hover:bg-pink-700">📷</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; ۱۴۰۳ فروشگاه آنلاین. تمام حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sample products data
+        const products = [
+            {
+                id: 1,
+                name: "تی شرت مردانه کلاسیک",
+                price: 250000,
+                image: "👕",
+                category: "لباس"
+            },
+            {
+                id: 2,
+                name: "کتاب آموزش برنامه نویسی",
+                price: 180000,
+                image: "📚",
+                category: "کتاب"
+            },
+            {
+                id: 3,
+                name: "هدفون بی سیم",
+                price: 850000,
+                image: "🎧",
+                category: "الکترونیک"
+            },
+            {
+                id: 4,
+                name: "کفش ورزشی",
+                price: 420000,
+                image: "👟",
+                category: "ورزش"
+            },
+            {
+                id: 5,
+                name: "ساعت هوشمند",
+                price: 1200000,
+                image: "⌚",
+                category: "الکترونیک"
+            },
+            {
+                id: 6,
+                name: "کیف دستی زنانه",
+                price: 320000,
+                image: "👜",
+                category: "لباس"
+            },
+            {
+                id: 7,
+                name: "موبایل هوشمند",
+                price: 15000000,
+                image: "📱",
+                category: "الکترونیک"
+            },
+            {
+                id: 8,
+                name: "عینک آفتابی",
+                price: 150000,
+                image: "🕶️",
+                category: "لباس"
+            }
+        ];
+
+        let cart = [];
+
+        // Format price in Persian
+        function formatPrice(price) {
+            return price.toLocaleString('fa-IR') + ' تومان';
+        }
+
+        // Render products
+        function renderProducts() {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = products.map(product => `
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6 text-center">
+                        <div class="text-6xl mb-4">${product.image}</div>
+                        <h4 class="font-bold text-lg mb-2">${product.name}</h4>
+                        <p class="text-gray-600 mb-2">${product.category}</p>
+                        <p class="text-2xl font-bold text-blue-600 mb-4">${formatPrice(product.price)}</p>
+                        <button onclick="addToCart(${product.id})" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            افزودن به سبد
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Add to cart
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const existingItem = cart.find(item => item.id === productId);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({...product, quantity: 1});
+            }
+            
+            updateCartUI();
+        }
+
+        // Remove from cart
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCartUI();
+        }
+
+        // Update cart UI
+        function updateCartUI() {
+            const cartCount = document.getElementById('cartCount');
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            const checkoutBtn = document.getElementById('checkoutBtn');
+            
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            cartCount.textContent = totalItems;
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p class="text-gray-500 text-center py-8">سبد خرید شما خالی است</p>';
+                checkoutBtn.disabled = true;
+            } else {
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="flex items-center justify-between p-4 border rounded-lg">
+                        <div class="flex items-center space-x-3 space-x-reverse">
+                            <span class="text-2xl">${item.image}</span>
+                            <div>
+                                <h5 class="font-medium">${item.name}</h5>
+                                <p class="text-sm text-gray-600">تعداد: ${item.quantity}</p>
+                            </div>
+                        </div>
+                        <div class="text-left">
+                            <p class="font-bold">${formatPrice(item.price * item.quantity)}</p>
+                            <button onclick="removeFromCart(${item.id})" class="text-red-500 text-sm hover:text-red-700">
+                                حذف
+                            </button>
+                        </div>
+                    </div>
+                `).join('');
+                checkoutBtn.disabled = false;
+            }
+            
+            cartTotal.textContent = formatPrice(totalPrice);
+        }
+
+        // Modal functionality
+        const cartModal = document.getElementById('cartModal');
+        const cartBtn = document.getElementById('cartBtn');
+        const closeCart = document.getElementById('closeCart');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+
+        cartBtn.addEventListener('click', () => {
+            cartModal.classList.remove('hidden');
+        });
+
+        closeCart.addEventListener('click', () => {
+            cartModal.classList.add('hidden');
+        });
+
+        cartModal.addEventListener('click', (e) => {
+            if (e.target === cartModal) {
+                cartModal.classList.add('hidden');
+            }
+        });
+
+        checkoutBtn.addEventListener('click', () => {
+            alert('این یک نمونه آزمایشی است. در سایت واقعی، شما به صفحه پرداخت هدایت خواهید شد.');
+            cart = [];
+            updateCartUI();
+            cartModal.classList.add('hidden');
+        });
+
+        // Initialize
+        renderProducts();
+        updateCartUI();
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9709a2967358dc94',t:'MTc1NTQzODU3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
